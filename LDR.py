@@ -11,19 +11,17 @@ def rc_time (LDR):
     count = 0
   
     #Output on the pin for 
-    GPIO.setup(LDR, GPIO.OUT)
-    GPIO.output(LDR, GPIO.LOW)
-    time.sleep(0.1)
+    GPIO.setup(LDR, GPIO.OUT)    
+    time.sleep(0.2)
 
     #Change the pin back to input
-    GPIO.setup(LDR, GPIO.IN)
-  
+    GPIO.setup(LDR, GPIO.IN)  
     #Count until the pin goes high
     while (GPIO.input(LDR) == GPIO.LOW):
         count += 1
 
     return count
-
+   
 #Catch when script is interrupted, cleanup correctly
 try:
     # Main loop
