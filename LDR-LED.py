@@ -6,12 +6,10 @@ GPIO.setmode(GPIO.BCM)
 
 #########################
 
-BLUE = 17
 RED = 27
-GPIO.setup(BLUE, GPIO.OUT)
 GPIO.setup(RED, GPIO.OUT)
 
-LDR = 4
+LDR = 4 
 
 #########################
 
@@ -27,31 +25,25 @@ def RCtime (LDR):
   while (GPIO.input(LDR) == GPIO.LOW):
     reading += 1
   return reading
-  
+
+################################
+z = 0  
 while True:
-  print RCtime(LDR)
-
-#########################
-
-z = 0
-
-if z==0:
-	if RCtime(LDR) > 10000:
-		GPIO.output(RED, True)
-    		GPIO.output(BLUE, True)
-		time.sleep(5)
-		GPIO.output(RED, False)
-		GPIO.output(BLUE, False)
-		z=1
-	else:
-		GPIO.output(RED, False)
-		GPIO.output(BLUE, False)
-elif z==1:
-	if RCtime(LDR) < 10000:
-		z = 0
-	else:
-		GPIO.output(RED, False)
-		GPIO.output(BLUE, False)
-
+ 
+ if z==0:
+  if RCtime(LDR) > 5000:
+   GPIO.output(RED,GPIO.HIGH)
+   time.sleep(5)
+   GPIO.output(RED,GPIO.LOW)
+   z=1
+  else:
+   GPIO.output(RED,GPIO.LOW)
+ elif z==1:
+  if RCtime(LDR) < 5000:
+   z = 0
+  else:
+   GPIO.output(RED,GPIO.LOW)
+  
+ print RCtime(LDR)
 	
   	  
