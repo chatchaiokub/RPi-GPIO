@@ -1,3 +1,5 @@
 # RPi-GPIO
 
-> sudo apt-get install python-dev python-rpi.gpio
+'''
+sudo apt-get install python-dev python-rpi.gpio
+'''
