@@ -19,7 +19,7 @@ sudo python setup.py install
 ```
 ### DHT22-SHEET.py
 ##### We use Python Module for reading from the DHT22 of Adafruit Industry also (DHT.py)
-Install requests Module
+### Install requests Module
 ```
 pip install requests
 ```
