@@ -6,7 +6,7 @@ sudo apt-get install python-dev python-rpi.gpio
 ```
 
 ### DHT.py
-##### We use Python Module for reading from the DHT22 of ### Adafruit Industry.
+##### We use Python Module for reading from the DHT22 of Adafruit Industry.
 ```
 sudo apt-get update
 
