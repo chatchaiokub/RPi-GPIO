@@ -26,24 +26,7 @@ def RCtime (LDR):
     reading += 1
   return reading
 
-#---------------------------------------
-z = 0  
-while True:
- 
- if z==0:
-  if RCtime(LDR) > 5000:
-   GPIO.output(RED,GPIO.HIGH)
-   time.sleep(5)
-   GPIO.output(RED,GPIO.LOW)
-   z=1
-  else:
-   GPIO.output(RED,GPIO.LOW)
- elif z==1:
-  if RCtime(LDR) < 5000:
-   z = 0
-  else:
-   GPIO.output(RED,GPIO.LOW)
   
+while True:
+
  print RCtime(LDR)
-	
-  	  
