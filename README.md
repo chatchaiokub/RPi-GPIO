@@ -18,7 +18,8 @@ cd Adafruit_Python_DHT
 sudo python setup.py install
 ```
 ### DHT22-SHEET.py
-### Create google sheet and share 'Open - anyone with the link' and access 'anyone edited'
+### 1. Create google sheet and share 'Open - anyone with the link' and access 'anyone edited' then COPY link.
+### 2. Create API from sheetsu.co by paste link
 ##### We use Python Module for reading from the DHT22 of Adafruit Industry also (DHT.py)
 ### Install requests Module
 ```
