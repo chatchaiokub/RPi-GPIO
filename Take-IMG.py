@@ -1,12 +1,13 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 import time
+import os
 
 GPIO.setmode(GPIO.BCM)
 
 #------------------------
 
-RED = 27
+RED = 17
 GPIO.setup(RED, GPIO.OUT)
 
 LDR = 4 
@@ -31,15 +32,17 @@ z = 0
 while True:
  
  if z==0:
-  if RCtime(LDR) > 5000:
+  if RCtime(LDR) > 3000:
    GPIO.output(RED,GPIO.HIGH)
    time.sleep(5)
+   os.system ("fswebcam fuck.jpg")
+   time.sleep(3)
    GPIO.output(RED,GPIO.LOW)
    z=1
   else:
    GPIO.output(RED,GPIO.LOW)
  elif z==1:
-  if RCtime(LDR) < 5000:
+  if RCtime(LDR) < 3000:
    z = 0
   else:
    GPIO.output(RED,GPIO.LOW)
