@@ -31,7 +31,7 @@ pip install requests
 ```
 sudo apt-get install fswebcam
 ```
-#### Use function system in os module for run command fswebcam
+#### Use function system in os module for run command 'fswebcam'
 ```
 import os
 
