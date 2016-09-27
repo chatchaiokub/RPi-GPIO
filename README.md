@@ -26,3 +26,14 @@ sudo python setup.py install
 ```
 pip install requests
 ```
+### Take-IMG.py
+#### Install webcam module take a picture.
+```
+sudo apt-get install fswebcam
+```
+#### Use function system in os module for run command 'fswebcam'
+```
+import os
+
+os.system ("fswebcam test.jpg")
+```
