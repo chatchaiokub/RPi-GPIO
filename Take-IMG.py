@@ -28,21 +28,21 @@ def RCtime (LDR):
   return reading
 
 #---------------------------------------
-z = 0  
+z = 1  
 while True:
  
  if z==0:
-  if RCtime(LDR) > 3000:
+  if RCtime(LDR) > 3300:
    GPIO.output(RED,GPIO.HIGH)
    time.sleep(5)
-   os.system ("fswebcam fuck.jpg")
+   os.system ("fswebcam snap.jpg")
    time.sleep(3)
    GPIO.output(RED,GPIO.LOW)
    z=1
   else:
    GPIO.output(RED,GPIO.LOW)
  elif z==1:
-  if RCtime(LDR) < 3000:
+  if RCtime(LDR) < 3300:
    z = 0
   else:
    GPIO.output(RED,GPIO.LOW)
